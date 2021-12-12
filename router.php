@@ -1,9 +1,17 @@
 <?php
-echo $controller;
-echo $action;
-include_once("controller/pages_controller.php");
+/*
+Este $controller es el  que recibimos en la petición
+*/
 
-$controller= new pagesController();
-$controller->home();
+include_once("controller/".$controller."_controller.php");
+
+/*
+Este $controller es completametne diferente del anterior $controller
+*/
+$objController = $controller."Controller";
+$controller= new $objController();
+$controller->$action();
 
 ?>
+
+
