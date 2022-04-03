@@ -15,12 +15,11 @@
           <nav class="navbar navbar-expand navbar-light bg-light">
               <div class="nav navbar-nav">
                   <a class="nav-item nav-link active" href="#"> Control <span class="visually-hidden">(current)</span></a>
-                  <a class="nav-item nav-link" href="#">Inicio</a>
+                  <a class="nav-item nav-link" href="?controller=employees&action=home">Inicio</a>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empleados</a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="?controller=employees&action=create">Crear</a></li>
-                        <li><a class="dropdown-item" href="?controller=employees&action=edit">Editar</a></li>
                       </ul>
                   </li>
               </div>

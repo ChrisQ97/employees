@@ -51,7 +51,25 @@
             return $this->email;
         }
 
+        public static function delete($id) {
+            $con = DataBase::createInstance();
+            $sql = $con->prepare("DELETE FROM infoEmployees WHERE id=?");
+            $sql->execute(array($id));
+        }
+
+        public static function search($id) {
+            $con = DataBase::createInstance();
+            $sql = $con->prepare("SELECT * FROM infoEmployees WHERE id=?");
+            $sql->execute(array($id));
+            $employee = $sql->fetch();
+            return new Employee($employee['id'],$employee['name'],$employee['age'],$employee['position'],$employee['phone'],$employee['email']);
+        }
+
+        public static function update($id, $n,$a,$p,$ph,$e) {
+            $con = DataBase::createInstance();
+            $sql = $con->prepare("UPDATE infoEmployees SET name=?, age=?, position=?, phone=?, email=? WHERE id=?");
+            $sql->execute(array($n,$a,$p,$ph,$e, $id));
+        }
+
     }
-
-
 ?>

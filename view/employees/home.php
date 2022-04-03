@@ -23,7 +23,10 @@
                 <td> <?php echo $employee->getEmail(); ?> </td>
                 <td>
                     <div class="btn-group" role="group" aria-label="">
-                        <a href="#" class="btn btn-info">Editar</a>
+                        <a href="?controller=employees&action=edit&id=<?php echo $employee->getId(); ?>" class="btn btn-info">Editar</a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="">
+                        <a href="?controller=employees&action=delete&id=<?php echo $employee->getId(); ?>" class="btn btn-danger">Eliminar</a>
                     </div>
                 </td>
             </tr>

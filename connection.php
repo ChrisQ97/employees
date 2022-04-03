@@ -8,8 +8,7 @@
         public static function createInstance(){
             if(!isset(self::$instance)){
                 $optionsPDO[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-                self::$instance = new PDO('mysql:host=localhost;dbname=employees','remote','remote',$optionsPDO);
-                echo "conexión realizada con exito";
+                self::$instance = new PDO('mysql:host=YOUR_HOST;dbname=employees','remote','remote',$optionsPDO); 
             }
             return self::$instance;
         }
